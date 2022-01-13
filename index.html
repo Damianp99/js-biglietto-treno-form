@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Train Ticket</title>
+</head>
+
+<body>
+    <!-- INSERIMENTO DATI PER BIGLIETTO TRENO -->
+    <div class="container-fluid bg-danger">
+        <h2 class="text-white text-center pb-5"> CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="container text-center bg-white rounded-3 mb-5">
+            <div class="row text-danger ">
+                <div class="col-4">
+                    <label class="pb-3" for="name"> Nome e Cognome </label><br>
+                    <input type="text" id="name">
+                </div>
+                <div class="col-4">
+                    <label class="pb-3" for="km"> Km da percorrere </label><br>
+                    <input type="text" id="km">
+                </div>
+                <div class="col-4">
+                    <label class="pb-3" for="age"> Fascia d'età </label><br>
+                    <select name="text" id="age">
+                        <option value="-18">Minore d'età</option>
+                        <option value="+18">Adulti</option>
+                        <option value="+65">Over 65</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="text-center mt-5 pb-5">
+                <button id="generate" class="text-danger p-2 rounded-3">Genera</button>
+                <button id="reset" class="text-danger p-2 rounded-3">Annulla</button>
+            </div>
+        </div>
+        <!-- SEZIONE BIGLIETTO PRENOTATO -->
+        <section>
+            <h2 class="text-white text-center pb-3">IL TUO BIGLIETTO</h2>
+            <div class="container bg-danger">
+                <div class="bg-white text-black container">
+                    <h5 class="fw-bold px-3">DETTAGLIO PASSEGERI</h5>
+                    <div class="row border border-secondary border-end-0 border-start-0 m-3">
+                        <div class="col-4 bg-secondary">
+                            <h5 class="fw-bold">NOME PASSEGGERO :</h5>
+                            <div id="username" class="fw-bold"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="fw-bold">Offerta</div>
+                                    <div id="offer"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="fw-bold">Carrozza</div>
+                                    <div id="wagon"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="fw-bold">Codice CP</div>
+                                    <div id="code"></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="fw-bold">Costo Biglietto</div>
+                                    <div id="ticket-price"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/train-ticket.js"></script>
+</body>
+
+</html>
